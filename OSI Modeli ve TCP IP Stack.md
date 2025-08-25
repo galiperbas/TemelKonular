@@ -9,8 +9,11 @@ Bilgi teorisinden bildiğimiz üzere iki cihaz arasında gürültüsüz ve hatas
 Bu makalenin yazılma motivasyonu ise, "bilgisayarlar nasıl birbirleriyle iletişim kuruyor?" gibi temel bir sorunun altını deşmek, "**under the hood**" [2] denilen yani soyutlama derecesinin az olduğu yerlerde, ne ve hangi işlemlerin olduğunu ağ özelinde anlamak. -- her ne kadar kara, sihirli kutu düşüncesi daha kolay olsa da [2].
 
 Bu süreçte, Cisco Packet Tracer kullanarak basitten karmaşığa doğru ağ topolojileri kuracağız. Yolumuzun üstünde OSI ve TCP/IP kavramlarının soyutlama katmanları da uygulamalı olarak karşımıza çıkacaktır.
+
 ## Cisco Packet Tracer
+
 ![packet tracer](images/osi-tcpip/packettracer.png)
+
 Cisco Networking Academy tarafından geliştirilmiş packet tracer programı birazdan kuracağımız ağ mimarilerinde başta, iletişimi yani kanal boyunca gönderilen mesajları simüle edilmiş öğrenme ortamında takip edip, ağları dizayn ve konfigüre etmemize yarayan CCNA seviyesi karmaşıklığında bir yazılımdır [3]. Ben 8.2.2 versiyonunu kullanmaktayım.
 ## Ağ Topolojileri
 Ağ topolojisi, bir ağdaki cihazların birbirine nasıl bağlandığını ve iletişim kurduğunu gösteren yapıdır. Ağ topoloji diyagramları, ağın mantıksal ve fiziksel düzenini görsel olarak ifade ederek kullanıcıların ağı anlamasına ve oluşabilecek sorunları gidermesine (troubleshooting) yardımcı olur.
@@ -64,12 +67,15 @@ Makineler arası iletişimin (network) modellenmesi fikri yeni olmasa da, 1984 y
 İletişimin veri üzerinden olduğu bilgisayar ağlarında aşağıdaki 7 ayrı farklı katmanın her birinin kendi **alan/domain**'i olmakla beraber, bir sonraki ya da önceki komşu katmana bu veri iletir.
 
 ![osi model](images/osi-tcpip/osi.png)
+
 OSI Modeli'nin 7 Katmanı [2]
 
 Yukarıdan, 7.katmandan aşağıya 1. katmana doğru sırasıyla her bir katmanı ayrı ayrı inceleyelim. Dediğimiz gibi her bir katmanın kendine özgü yapıp ettikleri, elindeki veriyi hemen bir sonraki komşu katmana - bazen bu veriye meta-data ekleyerek (**encapsulation**) - ilettikleri bir **katmanlı referans/conceptual model** anlayışından söz ediyoruz.
 
 Şunu da not etmek gerek: receiving/alıcı side ve sending/gönderici side tarafını aşağıda inceleyelim; gönderici tarafında her bir katmanın yaptığı işlem, alıcı tarafında yine aynı katmanda bu sefer işlemin tersi olacak şekilde yapılır. Örnek olarak encapsulation ile de-encapsulation.
+
 ![reverse](images/osi-tcpip/osi-model.png)
+
 Receiver ve sender [4]
 
 Ayrıca şekildeki gibi soyutlama derecesinin az olduğu ilk 3 katman donanım düzeyindeki işlemleri ifade ettiği içim donanım katmanları; diğer açıdan son kullanıcının daha çok etkileşime girdiği tarafa, yazılım katmanı ve bu iki tarafın ortasında köprü görevi gören Layer 4, yani veri iletiminden sorumlu olan Transport Layer olarak kategorize edebiliriz.
@@ -125,6 +131,7 @@ Bu katman, verinin ağ üzerinden bitler (0 ve 1'ler) halinde fiziksel olarak il
 ---
 
 ## TCP/IP Stack
+
 ![tcp](images/osi-tcpip/difference.png)
 TCP/IP daha az katmanda modelleme yapar [2]. 
 
