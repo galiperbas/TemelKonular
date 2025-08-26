@@ -103,6 +103,13 @@ Amaçlarına ve başarılı olduklarında ne beklendiğine göre HTTP istek meto
 7. **OPTIONS:** Sunucunun desteklediği HTTP metotlarını sorgulamak için kullanılır.
 
 ---
+## HTTP Headers
+
+![headers](images/http/headers.png)
+
+HTTP başlıkları sayesinde bu isteiğin zamanını, karşıdaki sunucunun Apache olduğunu ve daha bir çok şeyi öğreniyoruz.
+
+---
 
 ## HTTP Status Kodları
 
@@ -181,14 +188,16 @@ Sertifika kontrol aşamasında, sunucudan gelen sertifika tarayıcımız üzerin
 
 ![inspect-1](images/http/inspect-1.png)
 
-3. Bir web tarayıcısı, bir web sayfasına erişmek için bir web sunucusuna **HTTP isteği** (request) gönderir. Web sunucusu bu isteğe karşılık, web sayfasının içeriğini (genellikle **HTML** olarak) içeren bir **HTTP yanıtı** (response) geri gönderir. Bu sayede, tarayıcı sayfayı görüntüleyebilir.
+3. Bir web tarayıcısı, bir web sayfasına erişmek için bir web sunucusuna **HTTP isteği** (request) gönderir. Web sunucusu bu isteğe karşılık, web sayfasının içeriğini **HTTP yanıtı** (response) ile geri gönderir. Bu sayede, tarayıcı sayfayı görüntüleyebilir.
 
 ---
 
 ## Quiz
 
 - **keep-alive connection** denilen HTTP persistent iletişimi nedir?
+Tek bir kurulan bağlantı içinde gerekli tüm dosyaları almak.
 - RSA Sertifikası nedir?
+Açık anahtar şifreleme ile...
 - HTTP ile HTTPS arasındaki temel farklar nelerdir?
 - Bir HTTP isteğinde hangi başlıklar (headers) bulunabilir?
 - Status: 404 ne anlama gelir?
