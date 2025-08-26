@@ -18,6 +18,8 @@ Günlük hayatta sıkça yaptığımız, tarayıcı uygulamasına istediğimiz w
 
 Chrome gibi bir tarayıcıda gitmek istediğimiz web sitesinin adresini girdiğimizde, istekte bulunduğumuz ve internetin herhangi bir yerinde bulunan karşıdaki bilgisayar (**sunucu**), HTTP protokolü üzerinden bu web sayfasını indirmemiz için bize gönderir [1]. 
 
+Uniform Resource Locator (URL), her gün girdiğimiz bu web site adreslerinin adıdır.
+
 Aşağıdaki görselde olduğu gibi **http://** ya da **https://** ile başlayan **Uniform Resource Locator (URL)** adresini girdiğimizde, tarayıcı bu URL adresi için HTTP protokolü üzerinden dosya getirmesi gerektiğini anlar.
 
 ![URL](images/http/url.png)
@@ -103,11 +105,12 @@ Amaçlarına ve başarılı olduklarında ne beklendiğine göre HTTP istek meto
 7. **OPTIONS:** Sunucunun desteklediği HTTP metotlarını sorgulamak için kullanılır.
 
 ---
+
 ## HTTP Headers
 
 ![headers](images/http/headers.png)
 
-HTTP başlıkları sayesinde bu isteiğin zamanını, karşıdaki sunucunun Apache olduğunu ve daha bir çok şeyi öğreniyoruz.
+HTTP başlıkları sayesinde bu isteğin zamanını, karşıdaki sunucunun Apache olduğunu ve daha bir çok şeyi bu ek bilgilerden öğrenebiliyoruz.
 
 ---
 
@@ -130,14 +133,18 @@ HTTP durum (status) kodları 100 ile 599 arasındaki sayılardır ve her aralık
 - **Status: 404** – İstenen kaynak bulunamadı.
 - **Status: 500** – Sunucu tarafında bir hata oluştu.
 
+Bu kodlar, isteğin başarılı olup olmadığını veya ne tür bir hata oluştuğunu anlamamıza yardımcı olur.
+
 ---
 
 ## HTTP Sürümleri
 
-- **HTTP/1.0:** İlk sürüm, her istek için ayrı bağlantı açılır.
+- **HTTP/1.0:** İlk sürüm, her istek için ayrı bağlantı açılır. -- keep-alive yöntemi yok. 
 - **HTTP/1.1:** Persistent connection (keep-alive) desteği ile daha verimli bağlantı yönetimi sağlar.
-- **HTTP/2:** Çoklu isteklerin aynı bağlantı üzerinden iletilmesi (multiplexing) ile daha hızlı ve verimlidir.
+- **HTTP/2:** Çoklu isteklerin aynı bağlantı üzerinden iletilmesi **(multiplexing)** ile daha hızlı ve verimlidir.
 - **HTTP/3:** QUIC protokolü üzerine kurulu olup, daha düşük gecikme ve daha iyi güvenlik sunar.
+
+Her sürümün temel farkları ve avantajları vardır.
 
 ---
 
@@ -158,6 +165,7 @@ Diğer taraftan, HTTPS **şifreleme** (encryption) algoritmalarını kullandığ
 [6]: İstemci ve sunucu arasında asimetrik şifreleme ve anahtar değişimi vardır.
 
 **Secure Socket Layer (SSL)** ve daha günceli olan **Transport Layer Security (TLS)** şifreleme için kullanılır. **Private** ve **Public Key** anahtarları oluşturulur.
+
 
 ![TLS](images/http/TLS.png)
 
